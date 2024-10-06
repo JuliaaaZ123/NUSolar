@@ -1,6 +1,7 @@
 # starter.py
 
 import requests
+import random
 
 def get_random_joke():
     """Fetch a random joke from an online API."""
@@ -11,6 +12,16 @@ def get_random_joke():
     else:
         return "Failed to fetch a joke."
 
+
+def get_random_name():
+    """Fetch a random name from list."""
+    names=[
+        "shirley",
+        "Willie wildcat",
+        "Schill",
+        "Hummel"
+    ]
+    return random.choice(names)
 if __name__ == "__main__":
-    print("Fetching a random joke for you...")
-    print(get_random_joke())
+    print("Fetching a random name for you...")
+    print(get_random_name())
